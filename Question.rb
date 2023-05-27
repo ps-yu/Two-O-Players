@@ -1,20 +1,13 @@
-class Question 
-  def initialize(number)
-    @number = number 
+class Question
+  
+  attr_accessor :Number1, :Number2, :answer
+  def initialize
+    @Number1 = rand(1..10)
+    @Number2 = rand(1..10)
+    @answer = @Number1 + @Number2
   end
-  def check_answer()
-    number1 = rand(20);
-    puts number1
-    number2 = rand(20);
-    puts number2
-    sum = number1 + number2;
-    if @number == sum
-      true
-    else 
-      false
-    end
+
+  def output
+    "What does #{@Number1} + #{@Number2} equal?"
   end
 end
-
-p = Question.new(12);
-puts p.check_answer
